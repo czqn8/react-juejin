@@ -1,22 +1,26 @@
-/**
- * Created by zeal on 2017/7/23.
- */
-import Vue from 'vue'
-import { sync } from 'vuex-router-sync'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-Vue.config.productionTip = false
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
 
-sync(store, router)
-
-const {state} = store
-
-const app = new Vue({
-    store,
-    router,
-    ...App
-})
-
-export {app, router, store}
+export default App;
